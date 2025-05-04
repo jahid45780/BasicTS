@@ -1,0 +1,50 @@
+{
+    //utility types
+    // Pick
+    type Person = {
+      name: string;
+      age: number;
+      email?: string;
+      contactNo: string;
+    };
+  
+    type NameAge = Pick<Person, "name" | "age">;
+  
+    // Omit
+    type ContactInfo = Omit<Person, "name" | "age">;
+  
+    // Required
+    type PersonRequired = Required<Person>;
+  
+    // Partial
+    type PersonPartial = Partial<Person>;
+  
+    // Readonly
+    type PersonReadonly = Readonly<Person>;
+  
+    const person1: PersonReadonly = {
+      name: "Mr. XY",
+      age: 200,
+      contactNo: "017",
+    };
+    // person1.name = "Mr. YZ";
+  
+    // Record
+    // type MyObj = {
+    //   a: string;
+    //   b: string;
+    //   c: string
+    // };
+  
+    type MyObj1 = Record<string, string>;
+  
+    // const EmptyObj: Record<string, unknown> = {};
+  
+    const obj1: MyObj1 = {
+      a: "aa",
+      b: "bb",
+      c:'jj'
+    };
+  
+    //
+  }

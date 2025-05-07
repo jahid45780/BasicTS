@@ -25,6 +25,8 @@
          }
     }
 
+    
+
 
     class Cat extends Animal {
         constructor(name : string , species: string){
@@ -39,6 +41,29 @@
    const dog = new Dog("dog vai", "dog")
    const cat = new Cat ("cat vai", "cat")
 
+   //smart way this handle
+
+   const isDog = ( animal: Animal ) : animal is Dog => {
+      return animal instanceof Animal
+   }
+
+   const isCat = (animal: Animal) : animal is Cat  => {
+       return animal instanceof Animal
+   }
+
+   const getAnimal = (animal: Animal)=>{
+         if(isDog(animal)){
+             animal.makeBerk()
+         } else if ( isCat(animal) ){
+             animal.makeMeaw()
+         } else{
+            animal.makeSound()
+         }
+         
+   }
+
+   getAnimal(dog)
+   
    
 
 

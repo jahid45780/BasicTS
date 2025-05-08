@@ -25,7 +25,7 @@
 
     class student extends bankAccount{
         test(){
-            this.
+                    
         }
     }
     

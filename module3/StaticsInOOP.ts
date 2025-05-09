@@ -15,7 +15,7 @@
   
     // const instance1= new Counter()
     console.log(Counter.increment());
-    console.log(Counter.decrement);
-
+    console.log(Counter.decrement());
+    
 
 }
